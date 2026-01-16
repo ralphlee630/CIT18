@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning Contract</title>
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --border: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #eef2ff 0%, var(--bg) 35%);
+      line-height: 1.6;
+    }
+
+    header {
+      background: radial-gradient(1200px 300px at 50% -50%, #c7d2fe, transparent 60%), var(--card);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .container {
+      max-width: 960px;
+      padding: 1.25rem;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0.5rem 0 0.25rem;
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    main {
+      padding: 1.5rem 0 2rem;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.25rem 1.35rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    }
+
+    section h2 {
+      margin-top: 0;
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      color: var(--accent);
+    }
+
+    section p {
+      margin: 0.5rem 0 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    .sign {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .signature {
+      font-weight: 600;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 640px) {
+      .container { padding: 1rem; }
+      section { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Learning Contract</h1>
+      <p class="subtitle">A personal commitment to goals, responsibilities, and growth</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section id="expectations">
+        <h2>Expectations</h2>
+        <p>
+          I expect to engage consistently with the course materials, participate actively in discussions, and apply the concepts learned to practical tasks. I will manage my time effectively, meet deadlines, and seek clarification whenever concepts are unclear. In return, I expect clear guidance, timely feedback, and a supportive learning environment that encourages continuous improvement.
+        </p>
+      </section>
+
+      <section id="motivations">
+        <h2>Motivations</h2>
+        <p>
+          My primary motivation is to strengthen my technical and problem-solving skills while building a solid foundation for future academic and professional opportunities. I am driven by the desire to create meaningful, well-designed projects and to gain confidence in applying theory to real-world scenarios. Personal growth and long-term career readiness motivate me to stay committed throughout the learning process.
+        </p>
+      </section>
+
+      <section id="contributions">
+        <h2>Contributions</h2>
+        <p>
+          I will contribute by preparing for each lesson, collaborating respectfully with peers, and sharing insights or resources that may help others learn. I will maintain academic integrity, communicate professionally, and reflect on feedback to improve my work. Through consistent effort and collaboration, I aim to contribute positively to the overall learning community.
+        </p>
+      </section>
+
+      <section id="hindrances">
+        <h2>Hindrances</h2>
+        <p>
+          Potential hindrances include time constraints, competing responsibilities, and occasional technical challenges. To address these, I will plan ahead, prioritize tasks, and seek assistance when needed. By recognizing these challenges early, I commit to taking proactive steps to minimize their impact on my learning progress.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container sign">
+      <div class="signature">Signed by: Ralph Lee</div>
+      <div class="date">Date: <span id="date"></span></div>
+    </div>
+  </footer>
+
+  <script>
+    // Auto-fill today's date
+    const d = new Date();
+    document.getElementById('date').textContent = d.toLocaleDateString();
+  </script>
+</body>
+</html>
